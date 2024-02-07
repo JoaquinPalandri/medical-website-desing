@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormGroup,FormControl,Validators} from "@angular/forms";
+import {FormGroup,FormControl,Validators,AbstractControl} from "@angular/forms";
 
 @Component({
   selector: 'app-contact',
@@ -8,17 +8,15 @@ import {FormGroup,FormControl,Validators} from "@angular/forms";
 })
 export class ContactComponent {
 
-  contactForm:FormGroup<{ message: FormControl<string | null>; email: FormControl<string |null> }> = new FormGroup({
+  contactForm : FormGroup<{ message: FormControl<string | null>; email: FormControl<string | null> }> = new FormGroup({
     email : new FormControl('',[Validators.email,Validators.required]),
     message: new FormControl('',[Validators.required])
   })
 
-  get email(){
-    return this.contactForm.get('email')
-  }
 
-  get message(){
-    return this.contactForm.get('message')
+
+  get f():  { [key: string]: AbstractControl }{
+    return this.contactForm.controls;
   }
 
   contactUs(){

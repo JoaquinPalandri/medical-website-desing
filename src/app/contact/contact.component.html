@@ -90,11 +90,11 @@
       <div class=" grid grid-cols-2 gap-12 items-center">
         <div>
           <form [formGroup]="contactForm" (ngSubmit)="contactUs()" class="my-4 mx-16">
-            <p class=" text-red-400 font-poppins font-bold" *ngIf="email && email.invalid && email.touched">Email is not valid</p>
+            <p class=" text-red-400 font-poppins font-bold" *ngIf="f['email'] && f['email'].invalid && f['email'].touched">Email is not valid</p>
             <input type="email" formControlName="email" placeholder="Please enter you email" class="w-full rounded-lg py-1 px-2 font-poppins">
 
             <div class="my-4">
-              <p class=" text-red-400 font-poppins font-bold" *ngIf="message && message.invalid && message.touched">Message is required</p>
+              <p class="text-red-400 font-poppins font-bold" *ngIf="f['message'] && f['message'].invalid && f['message'].touched">Message is required</p>
               <textarea formControlName="message" class="w-full rounded-lg py-1 px-2 font-poppins " placeholder="Feel free to ask !"></textarea>
             </div>
 
