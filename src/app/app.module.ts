@@ -9,6 +9,7 @@ import { AboutComponent } from './modules/user/components/about/about.component'
 import { ContactComponent } from './modules/user/components/contact/contact.component';
 import { CentralPageComponent } from './modules/user/pages/central-page/central-page.component';
 import { NoPageFoundComponent } from './modules/user/pages/no-page-found/no-page-found.component';
+import {UserModule} from "./modules/user/user.module";
 
 @NgModule({
   declarations: [
@@ -20,11 +21,12 @@ import { NoPageFoundComponent } from './modules/user/pages/no-page-found/no-page
     CentralPageComponent,
     NoPageFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        UserModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

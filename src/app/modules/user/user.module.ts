@@ -6,12 +6,15 @@ import { LocationComponent } from './components/location/location.component';
 
 
 @NgModule({
-  declarations: [
-    LocationComponent
-  ],
-  imports: [
-    CommonModule,
-    UserRoutingModule
-  ]
+    declarations: [
+        LocationComponent
+    ],
+    exports: [
+        LocationComponent
+    ],
+    imports: [
+        CommonModule,
+        UserRoutingModule
+    ]
 })
 export class UserModule { }
