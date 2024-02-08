@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import {ReactiveFormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { CentralPageComponent } from './central-page/central-page.component';
-import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { NavbarComponent } from './modules/user/components/navbar/navbar.component';
+import { HomeComponent } from './modules/user/components/home/home.component';
+import { AboutComponent } from './modules/user/components/about/about.component';
+import { ContactComponent } from './modules/user/components/contact/contact.component';
+import { CentralPageComponent } from './modules/user/pages/central-page/central-page.component';
+import { NoPageFoundComponent } from './modules/user/pages/no-page-found/no-page-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
