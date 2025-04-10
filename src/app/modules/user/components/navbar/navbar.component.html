@@ -1,14 +1,14 @@
 <div class=" py-6 bg-white drop-shadow-2xl">
   <div class=" flex justify-around items-center">
 
-    <p class=" font-poppins text-lg font-bold">
-      <span class=" text-green-600 font-dancing text-3xl">DR.</span>
+    <p (click)="scrollToSection('homeSection')" class=" font-poppins text-lg font-bold hover:cursor-pointer">
+      <span  class=" text-green-600 font-dancing text-3xl hover:cursor-pointer">DR.</span>
       LMSSKINI</p>
 
     <div class=" flex items-center justify-between ">
       <p class="mx-2 p-1  font-roboto hover:cursor-pointer" (click)="scrollToSection('homeSection')"><a>Home</a></p>
       <p class="mx-2 p-1  font-roboto hover:cursor-pointer" (click)="scrollToSection('aboutSection')">About</p>
-      <p class="mx-2 p-1  font-roboto hover:cursor-pointer" (click)="scrollToSection('serviceSection')">Our services</p>
+      <p class="mx-2 p-1  font-roboto hover:cursor-pointer" (click)="scrollToSection('panicSection')">Button Panic</p>
       <p class="mx-2 p-1  font-roboto hover:cursor-pointer" (click)="scrollToSection('clinicSection')">Our clinic</p>
       <p class="mx-2 p-1  font-roboto hover:cursor-pointer" (click)="scrollToSection('locationSection')">Location</p>
     </div>

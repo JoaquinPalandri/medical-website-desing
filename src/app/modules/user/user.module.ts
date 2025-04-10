@@ -5,9 +5,12 @@ import { UserRoutingModule } from './user-routing.module';
 import { LocationComponent } from './components/location/location.component';
 
 
+
 @NgModule({
     declarations: [
-        LocationComponent
+        LocationComponent,
+        
+
     ],
     exports: [
         LocationComponent
